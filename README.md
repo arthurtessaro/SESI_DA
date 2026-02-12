@@ -1,2 +1,2 @@
 # SESI_DA
-Unidad curricular de Desenvolvimento de Aplicativos
+Unidade curricular de Desenvolvimento de Aplicativos
