@@ -9,7 +9,7 @@ body {
     color: wheat;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .menu img {
@@ -17,23 +17,85 @@ body {
     height: 100px;
     border-radius: 100%;
 }
+
 .menu p {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
 
 }
-.campo-pesquisa{
+
+.campo-pesquisa {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 
 }
 
-.campo-pesquisa input{
+.campo-pesquisa input {
     height: 60px;
     width: 50%;
     border-radius: 50px;
     font-size: 20px;
     padding-left: 30px;
+}
+
+.grupo-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+
+}
+
+.card {
+    width: 219px;
+    height: 264px;
+    border-radius: 10px;
+    margin: 0px 50px 0px 50px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.card p {
+    color: white;
+    font-size: 30px;
+    margin: 200px 0px 0px 20px;
+
+}
+
+.banner {
+    margin-top: 50px;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    height: 300px;
+}
+
+.card-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+.card-esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-direito {
+    background-image: url('./img/dog4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
 }
