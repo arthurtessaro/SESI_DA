@@ -1,0 +1,111 @@
+body {
+    margin: 0px;
+    background-color: white;
+}
+
+.tela-entrada {
+    display: flex;
+    min-height: 100vh;
+}
+
+.painel-destaque {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.726)
+    padding-top 50px;
+}
+
+.texto-boas-vindas {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.container-foto img {
+    width: 800PX;
+    height: 800px;
+    object-fit: cover;
+}
+
+.painel-interativo {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.conteudo-central {
+    width: 80%;
+}
+
+.chamada-principal {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.opcoes-autenticacao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-metodo-login {
+    height: 60px;
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.btn-metodo-login:hover {
+    background-color: white;
+}
+
+.btn-metodo-login img {
+    width: 30px;
+    margin-right: 15px;
+}
+
+.rodape-login {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.rodape-login p {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.link-ajuda {
+    color: rgb(252, 103, 34); 
+}
+
+
+.btn-acao-principal {
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(252, 103, 34); 
+    color: white;
+
+
+}
+
+.btn-acao-principal:hover {
+    background-color:  rgb(252, 103, 34);
+}
