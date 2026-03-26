@@ -1,35 +1,88 @@
-body{
-    background-image: url(img/bg.jpg);
-    justify-content: center;
-    background-size: cover;
+@font-face{
+   font-family: "Roboto";
+   src: url('./fontes/Roboto_SemiCondensed-Regular.ttf');
+}
 
+body{
+    background-image: url('./img/bg.jpg');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+
+#logo{
+margin-top: 150px;
+
 }
 
 .card-login{
+    display: flex;
+    flex-direction: column;
     background-color: #08687e;
     max-width: 340px;
-    margin: 30px auto 0;
     padding: 10px 30px 45px 30px;
     border-radius: 5px;
     text-align: center;
+    margin-top: 20px;
 }
 
-.card-login{
-    font-size: 20px;
+.card-login p{
+    font-size: 28px;
     color: white;
     text-transform: uppercase;
 }
+
 .input-icon{
     display: flex;
-}
-.icon{
+    height: 60px;
+    margin-bottom: 10px;
+
+ }
+
+ .icon{
     background-color: #faa635;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 8px 0px 0px 8px;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    display: flex;
+    
+ }
 
-}
-
-.icon-img{
+ .icon img{
     width: 50%;
-}
+ }
+
+ .input-icon input, select{
+    width: 100%;
+    outline: none;
+    border: 0px;
+    border-radius: 0px 8px 8px 0px;
+    padding-left: 10px;
+    color: #9a9a9a;
+ }
+
+ .card-login button{
+    height: 50px;
+    background-color: #0c9abe;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+ }
+
+ .card-login button:hover{
+    opacity: 0.89px;
+    color: #faa635;
+ }
+
+ .card-login a {
+    color: white;
+    font-weight: bold;}
