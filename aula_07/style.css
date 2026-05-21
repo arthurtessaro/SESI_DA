@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align: center;
+    color: #333;
+}
+
+.formulario{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formulario input{
+    padding: 10px;
+    flex: 1;
+}
+
+button{
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: #218838;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th{
+    background: #007bff;
+    color: white;
+}
+
+h2{
+    text-align: right;
+    margin-top: 20px;
+}

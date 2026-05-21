@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de Orçamento</h1>
+
+        <div class="formulario">
+            <input type="text" id="produto" placeholder="Nome do produto">
+
+            <input type="number" id="quantidade" placeholder="Quantidade">
+
+            <input type="number" id="preco" placeholder="Preço">
+
+            <button onclick="adicionarItem()">
+                Adicionar
+            </button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Qtd</th>
+                    <th>Preço</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="listaItens">
+
+            </tbody>
+        </table>
+
+        <h2 id="valorFinal">
+            Total: R$ 0,00
+        </h2>
+    </div>
+
+    <script src="trabalho.js"></script>
+</body>
+</html>
