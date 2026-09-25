@@ -1,0 +1,109 @@
+1 - Criação do Banco e Tabelas
+CREATE DATABASE pousada_db;
+USE pousada_db;
+
+CREATE TABLE acomodacoes (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+identificacao VARCHAR(100) NOT NULL,
+lotacao INT NOT NULL,
+frente_praia BOOLEAN,
+valor_diaria DECIMAL(10,2));
+
+CREATE TABLE hospedes (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome_completo VARCHAR(255) NOT NULL,
+correio_eletronico VARCHAR(255) NOT NULL,
+celular VARCHAR(255) NOT NULL);
+
+CREATE TABLE estadias (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+acomodacao_id INT NOT NULL,
+hospede_id INT NOT NULL,
+checkin DATE NOT NULL,
+checkout DATE NOT NULL,
+
+FOREIGN KEY (acomodacao_id) REFERENCES acomodacoes(id),
+FOREIGN KEY (hospede_id) REFERENCES hospedes(id));
+
+
+ 2 Inserção de Dados (Inserts)
+INSERT INTO acomodacoes(identificacao, lotacao, frente_praia, valor_diaria) VALUES 
+("Chalé 101", 2, false, 180.00),
+("Bangalô VIP", 4, true, 850.00), 
+("Suíte Master", 3, true, 500.00), 
+("Chalé 102", 2, false, 180.00), 
+("Suíte Standard", 2, false, 250.00);
+
+INSERT INTO hospedes(nome_completo, correio_eletronico, celular) VALUES
+("Carlos Eduardo", "carlos@email.com", "(46)9 9111-2233"),
+("Beatriz Souza", "beatriz@email.com", "(46)9 8222-4455"),
+("Gabriel Lima", "gabriel@email.com", "(46)9 7333-6677"),
+("Mariana Costa", "mariana@email.com", "(46)9 6444-8899"),
+("Lucas Rocha", "lucas@email.com", "(46)9 5555-0011");
+
+INSERT INTO estadias(hospede_id, acomodacao_id, checkin, checkout) VALUES
+(1, 2, '2023-06-10','2023-06-15'),
+(4, 3, '2023-06-20','2023-06-25'),
+(2, 1, '2023-03-01','2023-03-05'),
+(5, 4, '2023-01-10','2023-01-12'),
+(3, 5, '2023-04-12','2023-04-18');
+
+
+ 3 - Consultas (SELECTs)
+SELECT * FROM acomodacoes WHERE frente_praia = 1;
+
+SELECT nome_completo, correio_eletronico FROM hospedes;
+
+SELECT * FROM acomodacoes WHERE lotacao >= 3;
+
+SELECT * FROM hospedes WHERE nome_completo LIKE "M%";
+
+SELECT * FROM estadias WHERE checkin >= '2023-06-01' AND checkin <= '2023-06-30';
+
+
+ 4 - Funções de Agregação
+SELECT COUNT(*) FROM acomodacoes;
+
+SELECT MIN(valor_diaria) FROM acomodacoes;
+
+SELECT MAX(valor_diaria) FROM acomodacoes;
+
+SELECT AVG(valor_diaria) FROM acomodacoes;
+
+SELECT COUNT(frente_praia) FROM acomodacoes WHERE frente_praia = true;
+
+
+ 5 - Ordenação
+SELECT * FROM acomodacoes ORDER BY valor_diaria ASC;
+
+SELECT * FROM acomodacoes ORDER BY valor_diaria DESC;
+
+
+ 6 - Alteração de Tabela e Atualizações
+ALTER TABLE estadias ADD codigo_promo VARCHAR(10);
+
+UPDATE estadias SET codigo_promo = "PROMO1" WHERE id = 1;
+
+UPDATE estadias SET codigo_promo = "FERIAS" WHERE id = 3;
+
+UPDATE estadias SET codigo_promo = "VIP10" WHERE id = 5;
+
+
+ 7 e 8 - Junções (JOINs)
+SELECT * FROM estadias JOIN hospedes ON hospedes.id = estadias.hospede_id;
+
+SELECT * FROM estadias JOIN acomodacoes ON acomodacoes.id = estadias.acomodacao_id;
+
+
+ 9 - Exclusão de Registros
+DELETE FROM estadias WHERE id IN (1, 2);
+
+
+ 10 - Limpeza do Banco (Drop)
+DROP TABLE estadias;
+
+DROP TABLE hospedes;
+
+DROP TABLE acomodacoes;
+
+DROP DATABASE pousada_db;
